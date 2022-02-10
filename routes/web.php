@@ -21,4 +21,5 @@ Route::post('/export', [\App\Http\Controllers\ExportMultipleSheetsController::cl
 
 Route::get('/pdf', [\App\Http\Controllers\Controller::class, 'exportPDF']);
 
-Route::get('google-analytic', [\App\Http\Controllers\GoogleAnalyticController::class, 'index']);
+Route::get('/google-analytic/{all:.*}', [\App\Http\Controllers\GoogleAnalyticController::class, 'index']);
+
